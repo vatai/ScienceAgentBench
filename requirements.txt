@@ -4,9 +4,10 @@ botocore==1.35.61
 code_bert_score==0.4.1
 datasets==3.1.0
 docker_py==1.10.6
-litellm==1.52.8
+litellm==1.53.1
 openai==1.54.4
 python-dotenv==1.0.1
 Requests==2.32.3
 swebench==2.1.2
 tqdm==4.67.0
+httpx<0.28
