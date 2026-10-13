@@ -185,4 +185,4 @@ logs*/
 run_evaluation.sh
 pred_programs*/
 docker_run.sh
-run_eval_old.sh
+run_eval_old.shsmoke/

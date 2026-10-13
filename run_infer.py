@@ -46,7 +46,7 @@ def main(args):
         with open(args.log_fname, "r", encoding="utf-8") as log_f:
             solved = len([l for l in log_f])
 
-    row_ids = [i for i in range(len(dataset_hf))]
+    row_ids = [i for i in range(len(dataset_hf))][:args.max_tasks]
 
     for index in tqdm(row_ids):
         if index >= solved:
@@ -61,6 +61,7 @@ def main(args):
 
 if __name__ == "__main__":
     parser = ArgumentParser()
+    parser.add_argument("--max_tasks", type=int, default=None)
     parser.add_argument(
         "--benchmark_name_or_path",
         type=str,
