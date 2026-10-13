@@ -35,9 +35,9 @@ def main(args):
     )
 
     out_fpath = Path(args.out_fpath)
-    if out_fpath.exists():
+    if not Path(args.log_fname).exists() and out_fpath.exists():
         rmtree(out_fpath)
-    os.mkdir(out_fpath)
+    out_fpath.mkdir(parents=True, exist_ok=True)
 
     if not Path(args.log_fname).exists():
         open(args.log_fname, 'a').close()
