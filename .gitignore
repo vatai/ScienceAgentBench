@@ -188,3 +188,4 @@ docker_run.sh
 run_eval_old.shsmoke/
 results/
 results_run_all.log
+benchmark_verified.zip
